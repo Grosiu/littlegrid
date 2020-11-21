@@ -1,0 +1,154 @@
+/*
+    ### Variables ###
+*/
+$mobile: 375px;
+$desktop: 1440px;
+$backgroundcolor: hsl(204, 43%, 93%);
+$fontfamily: 'Karla', sans-serif;
+/*
+    ### Mixins ###
+*/
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+    ### GLOBAL ###
+*/
+
+html {
+    font-family: $fontfamily;
+    font-size: 16px;
+}
+
+body {
+    @include reset();
+    background-color: $backgroundcolor;
+    width: 100%;
+    height: 100vh;
+}
+
+/*
+    ### SINGLE PRICE SECTION ###
+*/
+
+ .single-price-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.wrapper {
+    min-width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px;
+
+    &__item {
+        padding: 0 20px;
+    }
+
+    &__item--1 {
+        background-color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: .8rem;
+    }
+
+    &__title-item1 {
+        color: hsl(179, 62%, 43%);
+    }
+    
+    &__subtitle-item1 {
+        color: hsl(71, 73%, 54%);
+    }
+
+    &__desc-item1 {
+        color:hsl(218, 22%, 67%);
+        word-spacing: 2px;
+        line-height: 1.5;
+        padding: 10px 0px;
+
+    }
+
+    &__item--2 {
+        background-color: hsl(179, 62%, 43%);
+        color :white;
+        font-size: .8rem;
+    }
+
+    &__desc-item2 {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    &__price-item2 {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        width: 100%;
+        background-color: hsl(71, 73%, 54%);
+        color: white;
+        font: inherit;
+        border: none;
+        margin: 20px 0px 20px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    &__item--3 {
+        background-color: hsl(179, 62%, 53%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: rgba(255, 255, 255, .7);
+        font-size: 0.9rem;
+    }
+
+    &__title-item3{
+        color: white;
+    }
+
+    &__list-item3 {
+        padding: 0 0 5px 0;
+        list-style-type: none;
+        
+    }
+}
+
+/*
+    ### Media Queries
+*/
+
+@media (min-width: 1440px) {
+ 
+    .wrapper {
+        height: 100%;
+        width:100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__item {
+            min-height: 80%;
+        }
+
+        &__item--1 {
+            grid-column: 1 / -1;
+        }
+
+        &__btn:hover {
+            cursor: pointer;
+            background-color: hsl(71, 73%, 24%) ;
+        }
+    }
+
+    
+}

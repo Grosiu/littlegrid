@@ -1,0 +1,122 @@
+/*
+    ### Variables ###
+*/
+/*
+    ### Mixins ###
+*/
+/*
+    ### GLOBAL ###
+*/
+html {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #e5eff5;
+  width: 100%;
+  height: 100vh;
+}
+
+/*
+    ### SINGLE PRICE SECTION ###
+*/
+.single-price-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  min-width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 15px;
+}
+.wrapper__item {
+  padding: 0 20px;
+}
+.wrapper__item--1 {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 0.8rem;
+}
+.wrapper__title-item1 {
+  color: #2ab2af;
+}
+.wrapper__subtitle-item1 {
+  color: #c0df34;
+}
+.wrapper__desc-item1 {
+  color: #98a6bd;
+  word-spacing: 2px;
+  line-height: 1.5;
+  padding: 10px 0px;
+}
+.wrapper__item--2 {
+  background-color: #2ab2af;
+  color: white;
+  font-size: 0.8rem;
+}
+.wrapper__desc-item2 {
+  color: rgba(255, 255, 255, 0.5);
+}
+.wrapper__price-item2 {
+  color: white;
+  font-size: 1.5rem;
+}
+.wrapper__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  width: 100%;
+  background-color: #c0df34;
+  color: white;
+  font: inherit;
+  border: none;
+  margin: 20px 0px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.wrapper__item--3 {
+  background-color: #3dd1cf;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+.wrapper__title-item3 {
+  color: white;
+}
+.wrapper__list-item3 {
+  padding: 0 0 5px 0;
+  list-style-type: none;
+}
+
+/*
+    ### Media Queries
+*/
+@media (min-width: 1440px) {
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .wrapper__item {
+    min-height: 80%;
+  }
+  .wrapper__item--1 {
+    grid-column: 1/-1;
+  }
+  .wrapper__btn:hover {
+    cursor: pointer;
+    background-color: #596a11;
+  }
+}
