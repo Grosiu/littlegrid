@@ -37,7 +37,7 @@ body {
   flex-flow: column wrap;
   border-radius: 5px;
   overflow: hidden; }
-  @media (min-width: 1440px) {
+  @media (min-width: 960px) {
     .offer {
       height: 100%;
       width: 100%;
@@ -45,13 +45,13 @@ body {
       grid-template-columns: 1fr 1fr; } }
   .offer__section {
     padding: 0 20px; }
-    @media (min-width: 1440px) {
+    @media (min-width: 960px) {
       .offer__section {
         min-height: 80%; } }
     .offer__section--description {
       background-color: white;
       font-size: .8rem; }
-      @media (min-width: 1440px) {
+      @media (min-width: 960px) {
         .offer__section--description {
           grid-column: 1 / -1; } }
     .offer__section--pricing {
