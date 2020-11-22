@@ -22,13 +22,14 @@ $fontfamily: 'Karla', sans-serif;
 html {
     font-family: $fontfamily;
     font-size: 16px;
+    height: 100%;
 }
 
 body {
     @include reset();
     background-color: $backgroundcolor;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 /*
