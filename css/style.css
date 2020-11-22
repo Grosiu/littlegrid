@@ -34,13 +34,25 @@ body {
   display: flex;
   flex-flow: column wrap;
   padding: 15px; }
+  @media (min-width: 1440px) {
+    .offer {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
   .offer__section {
     padding: 0 20px; }
+    @media (min-width: 1440px) {
+      .offer__section {
+        min-height: 80%; } }
     .offer__section--description {
       background-color: white;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       font-size: .8rem; }
+      @media (min-width: 1440px) {
+        .offer__section--description {
+          grid-column: 1 / -1; } }
     .offer__section--pricing {
       background-color: #2ab2af;
       color: white;
@@ -83,20 +95,6 @@ body {
   margin: 20px 0px 20px;
   border-radius: 5px;
   font-weight: 700; }
-
-/*
-    ### Media Queries
-*/
-@media (min-width: 1440px) {
-  .offer {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
-    .offer__section {
-      min-height: 80%; }
-      .offer__section--description {
-        grid-column: 1 / -1; }
   .btn:hover {
     cursor: pointer;
-    background-color: #596a11; } }
+    background-color: #596a11; }

@@ -2,7 +2,7 @@
     ### Variables ###
 */
 $mobile: 375px;
-$desktop: 1440px;
+$desktop: "(min-width: 1440px)";
 $backgroundcolor: hsl(204, 43%, 93%);
 $fontfamily: 'Karla', sans-serif;
 /*
@@ -49,14 +49,29 @@ body {
     flex-flow: column wrap;
     padding: 15px;
 
+    @media #{$desktop} {
+        height: 100%;
+        width:100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     &__section {
         padding: 0 20px;
+
+        @media #{$desktop} {
+            min-height: 80%;
+        }
 
         &--description {
             background-color: white;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             font-size: .8rem;
+
+            @media #{$desktop} {
+                grid-column: 1 / -1;
+            }
         }
 
         &--pricing {
@@ -121,32 +136,9 @@ body {
     margin: 20px 0px 20px;
     border-radius: 5px;
     font-weight: 700;
-}
 
-/*
-    ### Media Queries
-*/
-
-@media (min-width: 1440px) {
- 
-    .offer {
-        height: 100%;
-        width:100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        &__section {
-            min-height: 80%;
-
-            &--description {
-                grid-column: 1 / -1;
-            }
-        }
-    }
-
-    .btn:hover {
+    &:hover {
         cursor: pointer;
         background-color: hsl(71, 73%, 24%) ;
     }
-    
 }
